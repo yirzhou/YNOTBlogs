@@ -1,0 +1,71 @@
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+@import url(//fonts.googleapis.com/earlyaccess/notosansoriyaui.css);
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+
+
+.card-title {
+  font-family: 'Montserrat', sans-serif, Arial;
+  font-weight: bold;
+  color: #5e6063;
+  font-size: 40px;
+}
+
+.card-text {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+}
+
+h1.blog-title {
+  font-family: 'Abril Fatface', cursive;
+}
+
+p.lead {
+  font-family: 'Vollkorn', serif;
+  font-size: 22px;
+}
+
+h5.mt-0 {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+
+span.date-italic {
+  color: grey;
+}
+
+u {
+  font-weight: bold;
+}
+
+
+span#chinese {
+  font-family: 'Noto Sans Oriya UI', sans-serif;
+}
+
+p#about-app {
+  font-family: 'Lato', sans-serif;
+}
+
+p#signature {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 20px;
+}
+
+img#resize {
+  max-width:10%;
+}
+

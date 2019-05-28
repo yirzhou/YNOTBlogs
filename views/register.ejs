@@ -1,0 +1,84 @@
+<% include ./partials/header %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <div class="ui container">
+        <div style="width: 50%; margin: 25px auto;" class="ui attached message">
+            <div class="header">
+                Welcome to Yiren's blog!
+            </div>
+            <p>While it is a personal space for myself, I embrace other's opinions because I want to know you!
+               Please sign up for the best experience!
+            </p>
+        </div>
+        <h1 id="sign-up">Sign Up</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form class="ui form attached fluid segment" action="/user/register" method="POST">
+                <div class="field">
+                    <input type="text" name="username" placeholder="username">
+                </div>
+                
+                <div class="field">
+                    <input type="password" name="password" placeholder="password">
+                </div>
+                
+                <div class="field">
+                    <input type="text" name="portrait" placeholder="self-portrait: image URL">
+                </div>
+                
+                <div class="field">
+                    <input type="text" name="description" placeholder="description">
+                </div>
+    
+              
+                <button class="ui primary button" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    
+<!--    <script>-->
+<!--    $(document).ready(function(){-->
+<!--      $('.ui.form')-->
+<!--      .form({-->
+<!--        fields: {-->
+<!--          name: {-->
+<!--            identifier: 'fullname',-->
+<!--            rules: [-->
+<!--              {-->
+<!--                type   : 'empty',-->
+<!--                prompt : 'Please enter your name'-->
+<!--              }-->
+<!--            ]-->
+<!--          },-->
+<!--          username: {-->
+<!--            identifier: 'username',-->
+<!--            rules: [-->
+<!--              {-->
+<!--                type   : 'empty',-->
+<!--                prompt : 'Please enter a username'-->
+<!--              }-->
+<!--            ]-->
+<!--          },-->
+<!--          password: {-->
+<!--            identifier: 'password',-->
+<!--            rules: [-->
+<!--              {-->
+<!--                type   : 'empty',-->
+<!--                prompt : 'Please enter a password'-->
+<!--              },-->
+<!--              {-->
+<!--                type   : 'minLength[6]',-->
+<!--                prompt : 'Your password must be at least {ruleValue} characters'-->
+<!--              }-->
+<!--            ]-->
+<!--          }-->
+<!--        }-->
+<!--      })-->
+<!--    ;-->
+<!--    });-->
+    
+<!--</script>-->
+    
+
+   <% include ./partials/footer-fixed %>

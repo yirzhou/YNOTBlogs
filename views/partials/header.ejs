@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta charset="UTF-8">
+        <title>Blog App</title>
+        <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+        
+        <!-- Custom styles for this template -->
+        <link href="/css/blog-home.css" rel="stylesheet">
+        <!--<link href="/stylesheets/avatar.css" rel="stylesheet">-->
+        
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" />
+    
+        
+        <!--<link href="/css/blog-post.css" rel="stylesheet">-->
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7CLibre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Barlow+Condensed|Lato|Lobster|Merriweather|Open+Sans|Oswald|Raleway|Roboto|Slabo+27px|Vollkorn" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+            
+    </head>
+    <body>
+
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="/"><i class="fa fa-code" aria-hidden="true"></i>  Yiren's Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/blogs/new">Create Post</a>
+                </li>
+                <% if(!currentUser){ %>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/user/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/user/register">Sign Up</a>
+                    </li>
+                <%  } else { %>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Signed In As <%= currentUser.username%></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/user/logout">Logout</a>
+                    </li>
+                <%  } %>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="container">
+           <% if(error && error.length > 0) {  %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Sorry. Something went wrong!</strong> <%= error %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <% } %>
+          
+          <% if(success && success.length > 0) {  %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Perfect! Action completed.</strong> <%= success %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <% } %>
+        </div>
+        
+    
+       

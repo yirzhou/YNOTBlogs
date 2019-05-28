@@ -1,0 +1,23 @@
+i.icon{
+    font-size: 2em;
+}
+
+.container.main{
+    margin-top: 7em;
+}
+
+#delete{
+    display: inline;
+}
+
+div.ui.main.text.container {
+    padding-top: 30px;
+}
+
+
+
+h1#sign-up {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
